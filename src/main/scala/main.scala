@@ -8,6 +8,6 @@ object Main extends App {
   implicit val p: Parameters = Parameters.empty
   (new ChiselStage).execute(
     Array("--target-dir", "generated"),
-    Seq(chisel3.stage.ChiselGeneratorAnnotation(() => new SimpleCounterTop()(p).module))
+    Seq(chisel3.stage.ChiselGeneratorAnnotation(() => new SimpleCounterTop()(p)))
   )
 }
